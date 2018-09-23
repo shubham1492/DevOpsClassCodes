@@ -15,20 +15,23 @@
         <vaadin.plugin.version>${vaadin.version}</vaadin.plugin.version>
     </properties>
 
-<distributionManagement>
     <repositories>
+      <distributionManagement>
         <repository>
             <id>vaadin-prereleases</id>
             <name>Vaadin Pre-releases</name>
             <url>https://maven.vaadin.com/vaadin-prereleases</url>
         </repository>
+      </distributionManagement>
         <!-- Essential Vaadin artifacts are in maven central, but maven.vaadin.com 
             contains a huge set of additional libraries. See vaadin.com/directory -->
+<distributionManagement>	    
        <repository>
             <id>vaadin-addons</id>
             <url>http://maven.vaadin.com/vaadin-addons</url>
         </repository>
-
+</distributionManagement>
+	    <distributionManagement>
         <repository>
             <id>vaadin-snapshots</id>
             <url>http://oss.sonatype.org/content/repositories/vaadin-snapshots/</url>
@@ -39,8 +42,9 @@
                 <enabled>true</enabled>
             </snapshots>
         </repository>
+</distributionManagement>		    
     </repositories>
-</distributionManagement>
+
 
     <pluginRepositories>
         <pluginRepository>
